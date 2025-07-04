@@ -1,4 +1,5 @@
 // Hero Section
+import { Link } from "react-router-dom";
 
 import useScrollAnimation from "../../../hooks/useScrollAnimation";
 import { useState, useEffect, } from "react"
@@ -55,10 +56,11 @@ const Hero = () => {
               career with hands-on projects and real-world applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/auth">
               <button className="group px-8 py-4 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-2 animate-button-glow">
                 <span>Start Learning Today</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </button></Link>
               <button className="group px-8 py-4 border-2 border-purple-500 text-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2 hover:shadow-lg">
                 <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 <span>Watch Demo</span>

@@ -2,6 +2,9 @@
 import { useState, } from "react"
 import  useTheme  from "../../../hooks/theme";
 import { Sun, Moon, Menu, X,} from "lucide-react"
+
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const { isDark, setIsDark } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,11 +42,11 @@ const Header = () => {
             >
               {isDark ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-gray-600" />}
             </button>
-
+<Link to="/auth">
             <button className="hidden md:block px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
               Get Started
             </button>
-
+</Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
